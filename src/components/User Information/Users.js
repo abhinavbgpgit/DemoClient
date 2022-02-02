@@ -13,9 +13,7 @@ const Users = () => {
     const [user, setUser]=useState({ID:"",firstName:"", lastName :"",dateOfBirth:"", email :"" })
     const [allUser, setAllUser]=useState([])
     const[toggle, setToggle]=useState(true)
-    // const[idno, setIdNo]=useState(0)
-    //const [userWithID,setUserWithId]=useState({id:"",firstName:"", lastName :"",dateOfBirth:"", email :"" })
-    
+       
     //****** storing input fields in hook user ******/
     let name, value;   
         const handleInputs=(e)=>
@@ -32,7 +30,7 @@ const Users = () => {
            setAllUser(response.data)
                             })      
          .catch(err => {console.log(err)}) 
-       console.log("hhhhhhhhhh")
+      
         }
 
  //****** Showing data on page on first render ******/
@@ -145,7 +143,7 @@ const final={ firstName:user.firstName, lastName :user.lastName,dateOfBirth:user
     <li>Last name</li>
     <li>Date of birth</li>
     <li>Email of User</li>
-    {/* <li className='icon' onClick={()=>{deleteUser("Abhinav")}}><IoTrashOutline/></li> */}
+   
     <button >---------------Actions--------------</button> 
     </ul></div>
   
